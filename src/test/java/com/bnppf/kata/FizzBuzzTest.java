@@ -4,12 +4,16 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class FizzBuzzTest {
     private static FizzBuzz fizzBuzz = null;
+    private static ArrayList<String> result;
 
     @BeforeClass
     public static void setUp() {
         fizzBuzz = new FizzBuzz(1, 100);
+        result = fizzBuzz.sayNumbers();
     }
 
     @Test
@@ -19,16 +23,16 @@ public class FizzBuzzTest {
 
     @Test
     public void fizzTest() {
-        Assert.assertEquals("Fizz", fizzBuzz.sayNumbers().get(2));
+        Assert.assertEquals("Fizz", result.get(2));
     }
 
     @Test
     public void bizzTest() {
-        Assert.assertEquals("Buzz", fizzBuzz.sayNumbers().get(4));
+        Assert.assertEquals("Buzz", result.get(4));
     }
 
     @Test
     public void fizzBizzTest() {
-        Assert.assertEquals("FizzBuzz", fizzBuzz.sayNumbers().get(14));
+        Assert.assertEquals("FizzBuzz", result.get(14));
     }
 }
