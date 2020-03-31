@@ -1,3 +1,4 @@
 /.idea/
 /target/classes/com/bnppf/kata/FizzBuzz.class
 /target/test-classes/com/bnppf/kata/FizzBuzzTest.class
+/target/
