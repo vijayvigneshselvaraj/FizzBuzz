@@ -17,7 +17,12 @@ public class FizzBuzz {
 
     public ArrayList<String> sayNumbers() {
         numbers = new ArrayList();
-
-        return  numbers;
+        for (int i=this.fromNumber; i<=this.toNumber; i++) {
+            if (i%3==0 && i%5==0) numbers.add("FizzBuzz");
+            else if(i%3==0) numbers.add("Fizz");
+            else if(i%5==0) numbers.add("Buzz");
+            else numbers.add(""+i);
+        }
+        return numbers;
     }
 }
