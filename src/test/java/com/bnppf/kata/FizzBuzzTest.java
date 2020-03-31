@@ -8,12 +8,12 @@ import java.util.ArrayList;
 
 public class FizzBuzzTest {
     private static FizzBuzz fizzBuzz = null;
-    private static ArrayList<String> result;
+    private static ArrayList<String> numbers;
 
     @BeforeClass
     public static void setUp() {
         fizzBuzz = new FizzBuzz(1, 100);
-        result = fizzBuzz.sayNumbers();
+        numbers = fizzBuzz.sayNumbers();
     }
 
     @Test
@@ -23,16 +23,36 @@ public class FizzBuzzTest {
 
     @Test
     public void fizzTest() {
-        Assert.assertEquals("Fizz", result.get(2));
+        Assert.assertEquals("Fizz", numbers.get(2));
     }
 
     @Test
     public void bizzTest() {
-        Assert.assertEquals("Buzz", result.get(4));
+        Assert.assertEquals("Buzz", numbers.get(4));
     }
 
     @Test
     public void fizzBizzTest() {
-        Assert.assertEquals("FizzBuzz", result.get(14));
+        Assert.assertEquals("FizzBuzz", numbers.get(14));
+    }
+
+    @Test
+    public void fizzBizzNumberTest() {
+        Assert.assertEquals("16", numbers.get(15));
+    }
+
+    @Test
+    public void noFizzTest() {
+        Assert.assertNotEquals("Fizz", numbers.get(12));
+    }
+
+    @Test
+    public void noBuzzTest() {
+        Assert.assertNotEquals("Buzz", numbers.get(7));
+    }
+
+    @Test
+    public void noFizzBuzzTest() {
+        Assert.assertNotEquals("Buzz", numbers.get(5));
     }
 }
