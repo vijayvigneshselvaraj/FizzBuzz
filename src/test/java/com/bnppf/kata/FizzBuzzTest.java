@@ -13,46 +13,46 @@ public class FizzBuzzTest {
     @BeforeClass
     public static void setUp() {
         fizzBuzz = new FizzBuzz(1, 100);
-        numbers = fizzBuzz.sayNumbers();
+        numbers = fizzBuzz.findNumbers();
     }
 
     @Test
-    public void fizzBuzzObjectNotNullCheck() {
+    public void checkFizzBuzzWhetherObjectIsNotNullOrNotTest() {
         Assert.assertNotNull(fizzBuzz);
     }
 
     @Test
-    public void fizzTest() {
+    public void checkNumberTwoIsFizzTest() {
         Assert.assertEquals("Fizz", numbers.get(2));
     }
 
     @Test
-    public void bizzTest() {
+    public void checkNumberFourIsBuzzTest() {
         Assert.assertEquals("Buzz", numbers.get(4));
     }
 
     @Test
-    public void fizzBizzTest() {
+    public void checkNumberFourteenIsFizzBuzzTest() {
         Assert.assertEquals("FizzBuzz", numbers.get(14));
     }
 
     @Test
-    public void fizzBizzNumberTest() {
+    public void checkNumberFifteenIsSixteenTest() {
         Assert.assertEquals("16", numbers.get(15));
     }
 
     @Test
-    public void noFizzTest() {
+    public void checkNumberTwelveIsFizzTest() {
         Assert.assertNotEquals("Fizz", numbers.get(12));
     }
 
     @Test
-    public void noBuzzTest() {
+    public void checkNumberSevenIsBuzz() {
         Assert.assertNotEquals("Buzz", numbers.get(7));
     }
 
     @Test
-    public void noFizzBuzzTest() {
+    public void checkNumberFiveIsBuzz() {
         Assert.assertNotEquals("Buzz", numbers.get(5));
     }
 }
