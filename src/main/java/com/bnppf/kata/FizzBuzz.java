@@ -15,7 +15,7 @@ public class FizzBuzz {
         this.toNumber = toNumber;
     }
 
-    public ArrayList<String> sayNumbers() {
+    public ArrayList<String> findNumbers() {
         numbers = new ArrayList();
         for (int i=this.fromNumber; i<=this.toNumber; i++) {
             // Checking divisibility of both number 3 and 5
